@@ -1,0 +1,3 @@
+进入项目根目录，打开git命令窗口，执行：
+1:git checkout -b  wangmingchao-dev:  创建wangmingchao-dev分支，并自动切换到此分支上；idea上当前分支也自动切换；
+2:使用idea创建分支，应使用+New Branch
