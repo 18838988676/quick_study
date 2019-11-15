@@ -4,7 +4,7 @@
 public static Boolean valueOf(boolean b) {
     return b ? Boolean.TRUE : Boolean.FALSE;
 }
-复制ErrorOK!
+复制ErrorOK!23
 　　注意，静态工厂方法与设计模式中的工厂方法模式不同[Gamma95]。本条目中描述的静态工厂方法在设计模式中没有直接的等价。
 
 　　类可以为其客户端提供静态工厂方法，而不是公共构造方法。提供静态工厂方法而不是公共构造方法有优点也有缺点。
