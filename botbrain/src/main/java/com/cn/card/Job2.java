@@ -2,9 +2,10 @@ package com.cn.card;
 
 import java.util.concurrent.Callable;
 
-public class Job implements Callable {
+public class Job2 implements Callable {
 
-    private  int num=1000;
+    private  int num=100;
+    String st=new String("");
     /**
      * Computes a result, or throws an exception if unable to do so.
      *
@@ -14,14 +15,15 @@ public class Job implements Callable {
     @Override
     public Object call() throws Exception {
        StringBuffer msg=new StringBuffer();
-        while (true){
-            if(num<=0){break;}
-            System.out.println("线程："+Thread.currentThread().getName()+",剩余："+num);
-            num--;
-            msg.append("msg线程："+Thread.currentThread().getName()+",剩余："+num+"\t");
-            Thread.sleep(10);
+        while (true) {
+            if (num > 0) {
+                System.out.println("线程：" + Thread.currentThread().getName() + ",剩余：" + num);
+                num--;
+                msg.append("msg线程：" + Thread.currentThread().getName() + ",剩余：" + num + "\t");
+                Thread.sleep(10);
+                return msg;
+            }
         }
-        return msg;
 
     }
 }
