@@ -1,0 +1,9 @@
+server:
+    address: dfjalewjr
+    error:
+        include-exception: false
+        include-stacktrace: always
+    port: 8080
+    servlet:
+        application-display-name: 123
+        context-path: erqe

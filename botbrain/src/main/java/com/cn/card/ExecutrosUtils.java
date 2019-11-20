@@ -10,7 +10,7 @@ public class ExecutrosUtils {
             @Override
             public Thread newThread(Runnable r) {
                 num++;
-                return new Thread(r,"我是线程"+num);
+                return new Thread(r,"线程"+num);
             }
         });
         return executorService;

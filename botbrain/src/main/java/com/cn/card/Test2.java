@@ -1,5 +1,7 @@
 package com.cn.card;
 
+import org.springframework.util.StopWatch;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -11,18 +13,13 @@ public class Test2 {
         ExecutorService executorService=ExecutrosUtils.getCacheThreadPoolExecutors();
         List<Future<String>> futures=new ArrayList<>();
         Job2 job=new Job2();
-        long s1=System.currentTimeMillis();
+        StopWatch stopWatch=new StopWatch();
+        stopWatch.start();
         for (int i=0;i<3;i++){
-            futures.add( executorService.submit(new Callable<String>() {
-                @Override
-                public String call() throws Exception {
-
-
-                    return null;
-                }
-            }));
+            futures.add( executorService.submit(job));
         }
-        long e1=System.currentTimeMillis();
+        stopWatch.stop();
+
         for (Future s:futures             ) {
             try {
                 System.out.println(s.get());
@@ -31,7 +28,7 @@ public class Test2 {
             }
         }
 
-        System.out.println((e1-s1));
+        System.out.println(stopWatch.getTotalTimeMillis());
 
     }
 }

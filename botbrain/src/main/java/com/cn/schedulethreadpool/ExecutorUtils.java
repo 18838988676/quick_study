@@ -40,6 +40,19 @@ public class ExecutorUtils {
         return scheduledExecutor;
     }
 
+    //测试成功  new
+    @Bean("executorService123456new")
+    public ExecutorService getScheduleThreadPoolExecutorsNew(){
+        ScheduledExecutorService scheduledExecutor=new ScheduledThreadPoolExecutor(10, new ThreadFactory() {
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r,"xxl-job-admin-check");
+            }
+        });
+        return scheduledExecutor;
+    }
+
+
     //测试成功
     @Bean("tCachedThreadPoolExecutor987")
     public ThreadPoolExecutor getCachedThreadPoolExecutor() {

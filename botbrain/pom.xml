@@ -26,8 +26,9 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-starter-test3324</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

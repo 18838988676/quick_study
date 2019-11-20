@@ -20,7 +20,7 @@ public class Job2 implements Callable {
                 System.out.println("线程：" + Thread.currentThread().getName() + ",剩余：" + num);
                 num--;
                 msg.append("msg线程：" + Thread.currentThread().getName() + ",剩余：" + num + "\t");
-                Thread.sleep(10);
+//                Thread.sleep(10);
                 return msg;
             }
         }
