@@ -11,6 +11,7 @@
         <module>quick_one</module>
         <module>botbrain</module>
         <module>effective</module>
+        <module>artof</module>
     </modules>
     <packaging>pom</packaging>
 <parent>

@@ -97,25 +97,196 @@ IDEA自动生成固定代码片段
 4. 在代码中输入触发单词后按Tab，可以重复生成代码片段。
 
 ============================================
-activate-power-mode
+FindBugs-IDEA-1.0.1  已经关闭；   寻找bug;
+======================================
+
+GoogleTranslation
+ 使用很简单：选中单词或者段落ctrl+shift+y翻译，ctrl+shift+s切换翻译源
+由于不同版本快捷键可能有所不同，建议大家到settings-keymap中查看对应快捷键用法
+
+===================================================
+ log日志高亮 Grep Console
+setting --> console colors设置
+可以设置不同级别log的字体颜色和背景色.
+
+同时它还可以将打开任意文件并进行日志高亮, 不过对中文支持不太好
+
+===========================================================
+Key-Promoter-X 暂时用不到
+Key Promoter X 是一个提示插件，当你在IDEA里面使用鼠标的时候，如果这个鼠标操作是能够用快捷键替代的，那么Key Promoter X会弹出一个提示框，告知你这个鼠标操作可以用什么快捷键替代。对于想完全使用快捷键在IDEA的，这个插件就很有用。
 
 
+============================================================
+Maven Helper 暂时用不到
+一般用这款插件来查看maven的依赖树。在不使用此插件的情况下，要想查看maven的依赖树就要使用Maven命令maven dependency:tree来查看依赖。想要查看是否有依赖冲突也可以使用mvn dependency:tree -Dverbose -Dincludes=<groupId>:<artifactId>只查看关心的jar包，但是这样还是需要我执行命令，并且当项目比较复杂的时候，这个过程是比较漫长的。maven helper就能很好的解决这个问题。
+
+一旦安装了Maven Helper插件，只要打开pom文件，就可以打开该pom文件的Dependency Analyzer视图（在文件打开之后，文件下面会多出这样一个tab），进入Dependency Analyzer视图之后有三个查看选项，分别是Conflicts(冲突)、All Dependencies as List(列表形式查看所有依赖)、All Dependencies as Tree(树结构查看所有依赖)。并且这个页面还支持搜索。很方便！并且使用该插件还能快速的执行maven命令。
+==============================================
+String Manipulation
+提供强大的文本转换操作：
+
+切换样式（camelCase, hyphen-lowercase, HYPHEN-UPPERCASE, snake_case, SCREAMING_SNAKE_CASE, dot.case, words lowercase, Words Capitalized, PascalCase）
+转换为SCREAMING_SNAKE_CASE (或转换为camelCase)
+转换为 snake_case (或转换为camelCase)
+转换为dot.case (或转换为camelCase)
+转换为hyphen-case (或转换为camelCase)
+转换为hyphen-case (或转换为snake_case)
+转换为camelCase (或转换为Words)
+转换为camelCase (或转换为lowercase words)
+转换为PascalCase (或转换为camelCase)
+选定文本大写
+样式反转
+Un/Escape:
+
+Un/Escape 选中的 java 文本
+Un/Escape 选中的 javascript 文本
+Un/Escape 选中的 HTML 文本
+Un/Escape 选中的 XML 文本
+Un/Escape 选中的 SQL 文本
+Un/Escape 选中的 PHP 文本
+将 diacritics(accents) 转换为 ASCII
+将非ASCII 转换为转义的Unicode
+将转义的Unicode转换为字符串
+Encode/Decode:
+dfasdfdafdadfaderqwerSdfasdfadsf
+Encode 选中的文本为 MD5 Hex16
+De/Encode 选中的文本为 URL
+De/Encode 选中的文本为 Base64
+递增/递减:
+342341543252
+递增/递减所有找到的数字
+复制行并且递增/递减所有找到的数字
+创建序列：保持第一个数字，递增替换所有其他数字
+递增重复的数字
+按自然顺序排序:
+
+按行倒序
+按行随机排序
+区分大小写A-z排序
+区分大小写z-A排序
+不区分大小写A-Z排序
+不区分大小写Z-A排序
+按行长度排序
+通过子选择行排序：每行仅处理一个选择/插入符号
+对齐：
+
+通过选定的分隔将选定的文本格式化为列/表格
+将文本对齐为左/中/右
+过滤/删除/移除：
+
+grep选定的文本，所有行不匹配输入文字将被删除。 （不能在列模式下工作）
+移除选定的文本
+移除选定文本中的所有空格
+删除选定文本中的所有空格
+删除重复的行
+只保留重复的行
+删除空行
+删除所有换行符
+其他:
+
+交换字符/选择/线/标记
+切换文件路径分隔符：Windows < - > UNIX
+
+=======================================================================
+
+GsonFormat   Alt+S 打开；
+
+应该直接把从接口拿到的数据粘贴，避免 api 文档格式问题带来的各种不必要的 bug
+我们在解析服务器返回json数据时，一般都要创建一个实体类，作为json数据的载体。每个不同结构的json格式的数据都对应一个实体类。如果要一一去写这些实体类，那么实在太麻烦了。GsonFormat的出现很好的解决了这个问题，而且，GsonFormat的安装十分方便，只需在Android Studio插件库里面寻找并安装即可。下面是GsonFormat的安装流程:
+首先在Android Studio中选择File-Setting或者按Ctrl+Alt+S打开设置界面:
+
+此时会弹出一个输入框，将想要转换成实体类的json粘贴到输入框内，点击ok，GsonFormat就会自动为你生成对应的实体类。
 
 
+=====================================
+IDEA中使用Rest Client（类似postman）
+tools--->HTTP Client -->
 
+===========================================
+RestfulToolkit
 
+IDEA插件介绍（一） -RestfulToolkit（接口自测工具）
+一套 RESTful 服务开发辅助工具集。
 
+1.根据 URL 直接跳转到对应的方法定义 ( or Ctrl Alt N );
+2.提供了一个 Services tree 的显示窗口;
+3.一个简单的 http 请求工具;
+4.在请求方法上添加了有用功能: 复制生成 URL;,复制方法参数...
+5.其他功能: java 类上添加 Convert to JSON 功能，格式化 json 数据 ( Windows: Ctrl + Enter; Mac: Command + Enter )。
+————————————————
 
+因为我们公司开发模式为前后端分离，所以对接口文档要求较为苛刻，有时因开发任务多，接口文档无法及时提供，需要双方频繁沟通确认，为了解决这种现状，给大家安利一款插件，插件名为RestfulToolkit，能有效解决在无接口文档时，双方的联调工作。
 
+较比其他工具的优缺点：
+优点：
 
+其他工具如：postman,DHC,jmeter等，此工具直接集成与项目，不需要输入地址以及多个参数，便能直接访问。
 
+缺点：
 
+无法保存，每次使用参数都需要重新赋值，且没有请求记录。
 
+总结：
+此工具适合做接口测试，以及敏捷开发时使用，真证前后端分离式开发，还需要写好接口文档。
 
+安装后，右侧会有RestServices侧边栏，点击后会显示当前项目所有请求地址，可以进行输入查询，然后会直接把请求方式，地址以及参数列出来，默认请求服务器为本机（localhost:8080）,可根据需求更改。
+————————————————
+=========================
+里面有个测试插件挺好的；  选中某个方法  ALT+INS   TEST
 
+===============
+mybatis-log-plugin
 
+tools-->MyBatis log plugin;
+单机,窗口就出来了.接下来我们使用工具时,只要控制台有sql打印,我们的mybatis sql log 就会自动帮大家把sql和参数进行拼装
+===============
+IntelliJ IDEA 查看数据库插件（很强大的一个插件）
+一般我们查看数据库都使用 navicat或者 sqlyog等，其实不需要去下载破解这些软件，IDEA里面已经为我们集成好了一块数据库查看插件了
 
+先看看效果图：
 
+此插件基本满足了常规的开发要求，下面看看使用步骤：
+
+1）IDEA右边工具栏，有个Database插件
+=====================================
+IDEA下使用MyBatisCodeHelper插件.(IDEA的版本 2018 2.5亲测可用)
+
+1.1  IDEA安装MyBatisCodeHelper插件.
+        MyBatisCodeHelper插件现在要付费了,有条件可以买激活码激活的,支持正版,这里演示安装硬盘下载的插件的方式来介绍安装.
+
+       下载链接 提取码：3t9d（个人网盘分享）.内含多个版本的.下载解压查看.
+
+       Mybatis-Plugin插件下载：下载链接  提取码：3wac（个人网盘分享）解压使用,安装方法也是加载硬盘下载的插件的方式.
+
+       MyBatis-Plugin插件的功能简介如下.   
+
+              ① 提供Mapper接口与配置文件中对应SQL的导航.
+
+              ② 编辑XML文件时自动补全.
+
+              ③ 根据Mapper接口, 使用快捷键生成xml文件及SQL标签.
+
+              ④ ResultMap中的property支持自动补全，支持级联(属性A.属性B.属性C).
+
+              ⑤ 快捷键生成@Param注解.
+
+              ⑥ XML中编辑SQL时, 括号自动补全.
+
+              ⑦ XML中编辑SQL时, 支持参数自动补全(基于@Param注解识别参数).
+
+              ⑧ 自动检查Mapper XML文件中ID冲突.
+
+              ⑨ 自动检查Mapper XML文件中错误的属性值.
+
+              10 支持Find Usage.
+
+              12 支持重构从命名.
+
+              13 支持别名.
+
+              14 自动生成ResultMap属性.
+
+              15 快捷键: Option + Enter(Mac) | Alt + Enter(Windows).   
 
 
 
