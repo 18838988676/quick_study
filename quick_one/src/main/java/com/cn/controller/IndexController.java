@@ -12,4 +12,6 @@ public class IndexController {
         System.out.println(name);
         return "success";
     }
+
+
 }
