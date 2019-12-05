@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class Test01Controller {
 
     @RequestMapping("/index")
-    public String toString() {
+    public String toStrig() {
         User user=new User();
         user.setAddress("123");
-        return "success";
+        return "succes342s";
     }
 }
