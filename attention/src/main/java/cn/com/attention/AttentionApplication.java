@@ -23,7 +23,7 @@ public class AttentionApplication {
         ApplicationContext applicationContext = SpringApplication.run(AttentionApplication.class, args);
         for (String name : applicationContext.getBeanDefinitionNames()) {
             //获得所有bean;
-            System.out.println(name);
+         log.info("扫描出的所有bean:{}",name);
         }
     }
 

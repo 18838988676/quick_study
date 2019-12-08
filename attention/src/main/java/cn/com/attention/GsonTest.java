@@ -1,17 +1,13 @@
 package cn.com.attention;
 
+
 import cn.com.attention.entity.Person;
+import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
-import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.SimpleDateFormat;
@@ -19,7 +15,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/*Gson toJson 与 fromJson 
+     Gson 提供了 fromJson() 和 toJson() 两个直接用于解析和生成的方法，前者实现反序列化，后者实现了序列化。同时每个方法都提供了重载方法.。
 
+     Gson 对象的 toJson 方法可以将基本数据类型、以及 POJO 对象、List、Map 等转为 json 格式的字符串
+
+     Gson 对象的 fromJson 方法做与 toJson 相反的操作，将 json 格式的字符串转为基本数据类型、 POJO 对象、List、Map 等
+*/
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class GsonTest {
