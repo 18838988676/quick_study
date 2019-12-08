@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig implements WebMvcConfigurer {
-//http://localhost:8080/swagger-ui.html
+//http://localhost:8080/attention/swagger-ui.html
     @Value("${swagger.enable}")
     private boolean swaggerEnable;
 
@@ -38,7 +38,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title(env.getProperty("spring.application.name"))
+                .title(env.getProperty("swagger.title"))
                 .description("描述：这是用来测试的。。。。。。")
                 .build();
     }
