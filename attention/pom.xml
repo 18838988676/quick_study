@@ -37,6 +37,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.qcloud.cmq</groupId>
+            <artifactId>cmq</artifactId>
+            <version>1.0.2.20180622-topic</version>
+            <classifier>topic</classifier>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
