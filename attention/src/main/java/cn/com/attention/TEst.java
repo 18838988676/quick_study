@@ -5,14 +5,14 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+/**
+ * @Copyright：botBrain.ai
+ * @Author: WangMingChao
+ * @Date: 2019/12/20.
+ * @Description:
+ */
 @SpringBootTest
-public class AttentionApplicationTests {
+@RunWith(SpringRunner.class)
+public class TEst {
 
-    @Test
-    public void contextLoads() {
-        System.out.println("柳柴".hashCode());
-        System.out.println("柴柕".hashCode());
-    }
-
-}
+ }
