@@ -11,7 +11,7 @@
 
     <artifactId>quick_one</artifactId>
     <properties>
-    <version.Spring>2.0.1.RELEASE</version.Spring>
+    <version.Spring>2.5.12</version.Spring>
     </properties>
     <dependencies>
         <dependency>
